@@ -80,7 +80,6 @@ nav {
 }
 .btn-outline:hover { background: var(--green-pale); }
 .hero-stats { display: flex; gap: 2.5rem; flex-wrap: wrap; }
-.stat { }
 .stat-num { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
 .stat-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 400; }
 
@@ -96,7 +95,6 @@ section { padding: 80px 6%; }
 }
 .section-desc { color: var(--text-muted); max-width: 580px; margin-bottom: 3rem; font-size: 1rem; }
 
-/* ABOUT */
 .about { background: var(--green-dark); color: white; }
 .about .section-label { color: var(--yellow); }
 .about .section-title { color: white; }
@@ -111,7 +109,6 @@ section { padding: 80px 6%; }
 .about-card-title { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 600; color: var(--yellow); margin-bottom: 0.3rem; }
 .about-card-text { font-size: 0.88rem; color: rgba(255,255,255,0.7); }
 
-/* SKILLS */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
 .skill-card {
   background: var(--bg-card); border: 1px solid var(--border);
@@ -128,7 +125,6 @@ section { padding: 80px 6%; }
   padding: 3px 12px; font-size: 0.78rem; font-weight: 500;
 }
 
-/* PROJECTS */
 .projects { background: #f0f7f0; }
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
 .project-card {
@@ -157,7 +153,6 @@ section { padding: 80px 6%; }
 .project-link.primary { background: var(--green); color: white; }
 .project-link.primary:hover { background: var(--green-dark); }
 
-/* EXPERIENCE */
 .exp-list { display: flex; flex-direction: column; gap: 0; }
 .exp-item {
   display: grid; grid-template-columns: 180px 1fr;
@@ -165,12 +160,11 @@ section { padding: 80px 6%; }
   border-bottom: 1px solid var(--border);
 }
 .exp-item:last-child { border-bottom: none; }
-.exp-date { font-size: 0.83rem; color: var(--text-muted); padding-top: 4px; font-weight: 400; }
+.exp-date { font-size: 0.83rem; color: var(--text-muted); padding-top: 4px; }
 .exp-title { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--green-dark); }
 .exp-company { color: var(--green); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem; }
 .exp-desc { color: var(--text-muted); font-size: 0.92rem; }
 
-/* CONTACT */
 .contact { background: var(--green-dark); }
 .contact .section-label { color: var(--yellow); }
 .contact .section-title { color: white; }
@@ -198,10 +192,7 @@ section { padding: 80px 6%; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
 .availability-text { font-size: 0.85rem; color: #81C784; font-weight: 500; }
 
-footer {
-  text-align: center; padding: 2rem; background: #0f1a0f;
-  font-size: 0.82rem; color: rgba(255,255,255,0.4);
-}
+footer { text-align: center; padding: 2rem; background: #0f1a0f; font-size: 0.82rem; color: rgba(255,255,255,0.4); }
 
 @media (max-width: 768px) {
   .about-grid, .contact-grid, .exp-item { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -223,15 +214,14 @@ footer {
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
     <div class="hero-badge">📍 Oshawa, ON — Open to relocation across Canada</div>
-    <h1>Full-Stack<br>Developer<br><span class="accent">&</span> IT Professional</h1>
+    <h1>Full-Stack<br>Developer<br><span class="accent">&</span> IT Support Professional</h1>
     <p class="hero-sub">
       I build <strong>production apps</strong> and manage <strong>enterprise IT infrastructure</strong>.
-      Founder of FreshCart Market — a live grocery delivery app on iOS & Android.
+      I designed and launched <strong>FreshCart Market</strong> — a live grocery delivery app on iOS & Android.
       8+ years in IT support across helpdesk, systems, and networking.
     </p>
     <div class="hero-btns">
@@ -255,14 +245,13 @@ footer {
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="about" id="about">
   <div class="section-label">About Me</div>
   <div class="about-grid">
     <div class="about-text">
       <h2 class="section-title">Bridging IT Support & Software Development</h2>
       <p>I'm a <strong>Full-Stack Developer and IT Support Professional</strong> with a Computer Programming Diploma from Niagara College (2025) and 8+ years of hands-on experience in enterprise IT environments.</p>
-      <p>I founded and solo-built <strong>FreshCart Market</strong> — a live grocery delivery app serving Toronto, Oshawa & Barrie — handling everything from backend architecture and Stripe payments to App Store submission and marketing.</p>
+      <p>I designed and launched <strong>FreshCart Market</strong> — a live grocery delivery app serving Toronto, Oshawa & Barrie — handling everything from backend architecture and Stripe payments to App Store submission and marketing.</p>
       <p>On the IT side, I've deployed <strong>Active Directory environments</strong>, managed helpdesk operations, configured networks, and supported hundreds of end users across multiple organisations.</p>
     </div>
     <div class="about-cards">
@@ -282,7 +271,6 @@ footer {
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="section-label">Skills</div>
   <h2 class="section-title">Technical Expertise</h2>
@@ -363,18 +351,16 @@ footer {
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section class="projects" id="projects">
   <div class="section-label">Projects</div>
   <h2 class="section-title">What I've Built</h2>
   <p class="section-desc">From live mobile apps to enterprise IT labs — real projects with real impact.</p>
   <div class="projects-grid">
-
     <div class="project-card featured">
       <div class="project-badge">⭐ Live on App Stores</div>
       <div class="project-icon">🛒</div>
       <div class="project-title">FreshCart Market</div>
-      <div class="project-desc">Live grocery delivery app serving Toronto, Oshawa & Barrie. Built solo from scratch — mobile app, backend, payments, and marketing website. Delivers from Walmart, No Frills, Metro, Costco, LCBO & more.</div>
+      <div class="project-desc">Live grocery delivery app serving Toronto, Oshawa & Barrie. Designed and built solo — mobile app, backend, payments, and marketing website. Delivers from Walmart, No Frills, Metro, Costco, LCBO & more.</div>
       <div class="project-stack">
         <span class="tag">React Native</span>
         <span class="tag">Supabase</span>
@@ -387,11 +373,10 @@ footer {
         <a href="https://github.com/osasna1/freshcart-market" target="_blank" class="project-link">GitHub</a>
       </div>
     </div>
-
     <div class="project-card">
       <div class="project-icon">🏦</div>
       <div class="project-title">Premium Bank</div>
-      <div class="project-desc">Full-stack banking web application with secure authentication, account management, fund transfers, deposit/withdrawal, and complete transaction history. Built with React frontend and Node.js backend.</div>
+      <div class="project-desc">Full-stack banking web application with secure authentication, account management, fund transfers, deposit/withdrawal, and complete transaction history.</div>
       <div class="project-stack">
         <span class="tag">React</span>
         <span class="tag">Node.js</span>
@@ -403,11 +388,10 @@ footer {
         <a href="https://github.com/osasna1/premium-bank-frontend" target="_blank" class="project-link primary">GitHub</a>
       </div>
     </div>
-
     <div class="project-card">
       <div class="project-icon">🖥️</div>
       <div class="project-title">Active Directory Home Lab</div>
-      <div class="project-desc">Enterprise-grade Active Directory environment on VirtualBox. Windows Server 2022 domain controller, 4 OUs, 15 users, Group Policy configuration, and Windows 10 Pro client joined to domain over internal network.</div>
+      <div class="project-desc">Enterprise-grade Active Directory environment on VirtualBox. Windows Server 2022 domain controller, 4 OUs, 15 users, Group Policy, and Windows 10 Pro client joined to domain over internal network.</div>
       <div class="project-stack">
         <span class="tag">Windows Server 2022</span>
         <span class="tag">Active Directory</span>
@@ -419,11 +403,9 @@ footer {
         <a href="https://github.com/osasna1/active-directory-home-lab" target="_blank" class="project-link primary">Documentation</a>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-label">Experience</div>
   <h2 class="section-title">Work History</h2>
@@ -455,7 +437,6 @@ footer {
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="section-label">Contact</div>
   <h2 class="section-title">Let's Work Together</h2>
