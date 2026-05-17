@@ -25,61 +25,72 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 
 nav {
   position: fixed; top: 0; left: 0; right: 0; height: 70px;
-  background: rgba(250,252,250,0.92); backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(0,0,0,0.5); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 6%; z-index: 100;
 }
-.nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--green-dark); }
+.nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; color: white; }
 .nav-logo span { color: var(--yellow-dark); }
 .nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
-.nav-links a:hover { color: var(--green); }
+.nav-links a { font-size: 0.9rem; font-weight: 500; color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--yellow); }
 
 .hero {
   min-height: 100vh; display: flex; align-items: center;
   padding: 140px 6% 80px; position: relative; overflow: hidden;
+  background: 
+    linear-gradient(135deg, rgba(0,0,0,0.82) 0%, rgba(10,30,10,0.75) 50%, rgba(0,0,0,0.85) 100%),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80') center/cover no-repeat;
 }
-.hero-bg {
-  position: absolute; top: -100px; right: -100px;
-  width: 600px; height: 600px; border-radius: 50%;
-  background: radial-gradient(circle, #E8F5E9 0%, transparent 70%);
+.hero-grid-overlay {
+  position: absolute; inset: 0;
+  background-image: 
+    linear-gradient(rgba(46,125,50,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46,125,50,0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 0;
+}
+.hero-glow {
+  position: absolute; top: 20%; right: 5%;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(46,125,50,0.25) 0%, transparent 70%);
   z-index: 0;
 }
 .hero-content { position: relative; z-index: 1; max-width: 800px; }
 .hero-badge {
-  display: inline-block; background: var(--green-pale); color: var(--green-dark);
-  border: 1px solid #c8e6c9; border-radius: 100px;
+  display: inline-block; background: rgba(46,125,50,0.3); color: #81C784;
+  border: 1px solid rgba(76,175,80,0.4); border-radius: 100px;
   padding: 6px 16px; font-size: 0.82rem; font-weight: 500;
   margin-bottom: 1.5rem; letter-spacing: 0.5px;
 }
 .hero h1 {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(2rem, 4.5vw, 3.6rem);
-  font-weight: 800; line-height: 1.15; letter-spacing: -1px;
-  margin-bottom: 0.6rem; color: var(--green-dark);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 800; line-height: 1.1; letter-spacing: -1px;
+  margin-bottom: 0.6rem; color: white;
 }
 .hero h1 .line2 {
-  color: var(--green);
+  color: var(--green-light);
   display: block;
 }
 .hero h1 .line3 {
-  color: var(--text);
+  color: rgba(255,255,255,0.6);
   display: block;
-  font-size: clamp(1.4rem, 3vw, 2.4rem);
-  font-weight: 600;
-  letter-spacing: -0.5px;
-  margin-top: 0.3rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+  font-weight: 500;
+  letter-spacing: 0px;
+  margin-top: 0.4rem;
 }
 .hero-divider {
-  width: 60px; height: 4px; background: var(--yellow-dark);
+  width: 60px; height: 3px; background: var(--yellow-dark);
   border-radius: 2px; margin: 1.2rem 0;
 }
 .hero-sub {
-  font-size: 1.05rem; color: var(--text-muted); max-width: 580px;
+  font-size: 1.05rem; color: rgba(255,255,255,0.72); max-width: 580px;
   margin-bottom: 2.5rem; font-weight: 300; line-height: 1.8;
 }
-.hero-sub strong { color: var(--text); font-weight: 500; }
+.hero-sub strong { color: white; font-weight: 500; }
 .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
 .btn-primary {
   background: var(--green); color: white; padding: 14px 28px;
@@ -87,17 +98,17 @@ nav {
   font-size: 0.95rem; transition: background 0.2s, transform 0.1s;
   border: none; cursor: pointer;
 }
-.btn-primary:hover { background: var(--green-dark); transform: translateY(-1px); }
+.btn-primary:hover { background: var(--green-light); transform: translateY(-1px); }
 .btn-outline {
-  background: transparent; color: var(--green); padding: 14px 28px;
+  background: transparent; color: white; padding: 14px 28px;
   border-radius: 8px; text-decoration: none; font-weight: 500;
-  font-size: 0.95rem; border: 1.5px solid var(--green);
+  font-size: 0.95rem; border: 1.5px solid rgba(255,255,255,0.4);
   transition: all 0.2s;
 }
-.btn-outline:hover { background: var(--green-pale); }
+.btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
 .hero-stats { display: flex; gap: 2.5rem; flex-wrap: wrap; }
-.stat-num { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
-.stat-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 400; }
+.stat-num { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--yellow); }
+.stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.5); font-weight: 400; }
 
 section { padding: 80px 6%; }
 .section-label {
@@ -231,13 +242,14 @@ footer { text-align: center; padding: 2rem; background: #0f1a0f; font-size: 0.82
 </nav>
 
 <section class="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-glow"></div>
   <div class="hero-content">
     <div class="hero-badge">📍 Oshawa, ON — Open to relocation across Canada</div>
     <h1>
       Full-Stack Developer
       <span class="line2">&amp; IT Support Professional</span>
-      <span class="line3">Helpdesk · Systems · Networking</span>
+      <span class="line3">Helpdesk · Systems · Networking · Mobile Apps</span>
     </h1>
     <div class="hero-divider"></div>
     <p class="hero-sub">
